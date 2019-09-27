@@ -93,7 +93,9 @@ def evaluate(segmentation_module, loader, cfg, gpu, model_name, paper_arxiv_id):
           break
         
         pbar.update(1)
-
+    
+    evaluator.save()
+    
 assert LooseVersion(torch.__version__) >= LooseVersion('0.4.0'), \
     'PyTorch>=0.4.0 is required'
 
